@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportHeight="100"
+    android:viewportWidth="100">
+
+    <!-- L = lineTo (L X, Y )
+         X ： X轴终点坐标
+         Y ： Y轴终点坐标
+    -->
+
+    <!-- L = lineTo (L X0,Y0  X1,Y1 ....)
+         X0 ： X轴中间点的坐标
+         Y0 ： Y轴中间点的坐标
+         X1 ： X轴中间第二个点的坐标
+         Y1 ： Y轴中间第二个点的坐标
+    -->
+
+    <!-- android:strokeLineCap 画出线条结束点的形状
+         square ：正方形
+         round ： 圆角矩形
+         butt ： 烟头型
+     -->
+
+    <group>
+        <path
+            android:name="first_path"
+            android:pathData="M 20,80
+                              L 50,80 80,80 "
+            android:strokeColor="@android:color/holo_green_light"
+            android:strokeLineCap="round"
+            android:strokeWidth="5" />
+
+        <path
+            android:name="second_path"
+            android:pathData="M 20,20
+                              L 50,20 80,20"
+            android:strokeColor="@android:color/holo_green_light"
+            android:strokeLineCap="round"
+            android:strokeWidth="5" />
+
+    </group>
+
+</vector>

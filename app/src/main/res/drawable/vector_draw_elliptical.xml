@@ -2,25 +2,27 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="200dp"
     android:height="200dp"
-    android:viewportWidth="100"
-    android:viewportHeight="100">
+    android:viewportHeight="100"
+    android:viewportWidth="100">
 
     <!-- A = elliptical Arc(A RX,RY,XROTATION,FLAG1,FLAG2,X,Y)：弧线
         RX ： 椭圆X轴方向上的半径
         RY ： 椭圆Y轴方向上的半径
         XROTATION  : X轴的旋转角度
-        FLAG1 ： 1 大角度弧线，0 小角度弧线
+        FLAG1 ： 1 大角度弧线，0 小角度弧线 （两个坐标之间是绘制大弧，还是小弧度）
         FLAG2 ： 1 瞬时间，0 逆时针
         X，Y ： 起始点的坐标 + （X，Y） = 终点坐标
     -->
 
-    <group android:name="test"
-         android:rotation="0">
-         <path
-             android:strokeColor="@android:color/holo_blue_light"
-             android:strokeWidth="2"
-             android:pathData="M 25 50
-                               a 25,25 0 1,0 50,0"/>
+    <group
+        android:name="group_one"
+        android:rotation="0">
+        <path
+            android:name="path_one"
+            android:pathData="M 25 50
+                               a 25,25 0 1,0 50,0"
+            android:strokeColor="@android:color/holo_blue_light"
+            android:strokeWidth="2" />
     </group>
 
 </vector>
