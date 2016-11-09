@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <group
+        android:name="sun"
+        android:pivotX="60"
+        android:pivotY="50"
+        android:rotation="0">
+
+        <!--  小写的a ：  相对位置，参考父容器的坐标系
+           a = elliptical Arc(a RX,RY,XROTATION,FLAG1,FLAG2,X,Y)：弧线
+           RX ： 椭圆X轴方向上的半径
+           RY ： 椭圆Y轴方向上的半径
+           XROTATION  : X轴的旋转角度
+           FLAG1 ： 1 大角度弧线，0 小角度弧线 （两个坐标之间是绘制大弧，还是小弧度）
+           FLAG2 ： 1 瞬时间，0 逆时针
+           X，Y ： 起始点的坐标 + （X，Y） = 终点坐标
+        -->
+
+        <!-- 如果写了两个 a
+            a 10,10 0 1,0 20,0
+            a 10,10 0 1,0 -20,0
+
+            第二个a的坐标点，参考上一个a的结束位置
+         -->
+
+        <path
+            android:name="path_sun"
+            android:fillColor="@android:color/holo_blue_light"
+            android:pathData="
+            M 50,50
+            a 10,10 0 1,0 20,0
+            a 10,10 0 1,0 -20,0
+            "/>
+
+        <group
+            android:name="earth"
+            android:pivotX="80"
+            android:pivotY="50"
+            android:rotation="0">
+
+            <path
+                android:name="path_earth"
+                android:fillColor="@android:color/holo_orange_light"
+                android:pathData="
+                M 75,50
+                a 5,5 0 1,0 10,0
+                a 5,5 0 1,0 -10,0"
+                />
+
+            <group>
+
+                <path
+                    android:fillColor="@android:color/holo_green_light"
+                    android:pathData="
+                    M 88,50
+                    a 4,4 0 1,0 8,0
+                    a 4,4 0 1,0 -8,0"
+                    />
+            </group>
+
+        </group>
+
+    </group>
+
+</vector>

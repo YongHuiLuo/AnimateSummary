@@ -1,53 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.android.animatesummary.MainActivity"
-    tools:showIn="@layout/activity_main"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/text_tip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
 
-    <ImageView
-        android:id="@+id/elliptical_anim_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text_tip"
-        android:layout_marginTop="30dp"
-        android:background="@android:color/black"
-        android:src="@drawable/animate_vector_elliptical_drawable"/>
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.android.animatesummary.MainActivity"
+        tools:showIn="@layout/activity_main">
 
-    <Button
-        android:id="@+id/elliptical_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/elliptical_anim_image"
-        android:layout_alignTop="@id/elliptical_anim_image"
-        android:layout_marginLeft="20dp"
-        android:text="椭圆动画"/>
+        <TextView
+            android:id="@+id/text_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!" />
 
-    <ImageView
-        android:id="@+id/line_anim_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/elliptical_anim_image"
-        android:layout_marginTop="30dp"
-        android:src="@drawable/animate_vector_line_drawable"/>
+        <ImageView
+            android:id="@+id/elliptical_anim_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_tip"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/black"
+            android:src="@drawable/animate_vector_elliptical_drawable" />
 
-    <Button
-        android:id="@+id/line_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/line_anim_image"
-        android:layout_alignTop="@id/line_anim_image"
-        android:layout_marginLeft="20dp"
-        android:text="线条动画"/>
+        <Button
+            android:id="@+id/elliptical_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/elliptical_anim_image"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/elliptical_anim_image"
+            android:text="椭圆动画" />
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/line_anim_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/elliptical_anim_image"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/animate_vector_line_drawable" />
+
+        <Button
+            android:id="@+id/line_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/line_anim_image"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/line_anim_image"
+            android:text="线条动画" />
+
+        <Button
+            android:id="@+id/line_reset_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_btn"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/line_anim_image"
+            android:text="线条动画重置" />
+
+
+        <ImageView
+            android:id="@+id/svg_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_anim_image"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/black"
+            android:src="@drawable/animate_vector_star_drawable" />
+
+        <Button
+            android:id="@+id/star_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/svg_star"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/svg_star"
+            android:text="星体旋转动画" />
+
+    </RelativeLayout>
+</ScrollView>

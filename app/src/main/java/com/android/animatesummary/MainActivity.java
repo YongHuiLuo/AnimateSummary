@@ -3,7 +3,6 @@ package com.android.animatesummary;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -33,14 +32,36 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ImageView imgLine = (ImageView) findViewById(R.id.line_anim_image);
-        final Drawable drawableLine = imgLine.getDrawable();
-
+        final ImageView imgLine = (ImageView) findViewById(R.id.line_anim_image);
         findViewById(R.id.line_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                imgLine.setImageDrawable(getDrawable(R.drawable.animate_vector_line_drawable));
+                final Drawable drawableLine = imgLine.getDrawable();
                 if (drawableLine instanceof  Animatable){
                     ((Animatable) drawableLine).start();
+                }
+            }
+        });
+
+        findViewById(R.id.line_reset_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imgLine.setImageDrawable(getDrawable(R.drawable.animate_vector_line_reset_drawable));
+                if(imgLine.getDrawable() instanceof Animatable){
+                    ((Animatable) imgLine.getDrawable()).start();
+                }
+            }
+        });
+
+        ImageView imgStar = (ImageView) findViewById(R.id.svg_star);
+        final Drawable drawableStar = imgStar.getDrawable();
+
+        findViewById(R.id.star_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(drawableStar instanceof  Animatable){
+                    ((Animatable) drawableStar).start();
                 }
             }
         });
