@@ -19,13 +19,24 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        ImageView imgElliptical = (ImageView) findViewById(R.id.elliptical_anim_image);
-        final Drawable drawableElliptical = imgElliptical.getDrawable();
-
+        final ImageView imgElliptical = (ImageView) findViewById(R.id.elliptical_anim_image);
 
         findViewById(R.id.elliptical_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                imgElliptical.setImageDrawable(getDrawable(R.drawable.animate_vector_elliptical_drawable));
+                Drawable drawableElliptical = imgElliptical.getDrawable();
+                if(drawableElliptical instanceof Animatable){
+                    ((Animatable)drawableElliptical).start();
+                }
+            }
+        });
+
+        findViewById(R.id.elliptical_path_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imgElliptical.setImageDrawable(getDrawable(R.drawable.animate_vector_elliptical_path_drawable));
+                Drawable drawableElliptical = imgElliptical.getDrawable();
                 if(drawableElliptical instanceof Animatable){
                     ((Animatable)drawableElliptical).start();
                 }

@@ -16,6 +16,8 @@
 
     <group
         android:name="group_one"
+        android:pivotY="50"
+        android:pivotX="50"
         android:rotation="0">
         <path
             android:name="path_one"

@@ -3,7 +3,7 @@
     android:drawable="@drawable/vector_draw_elliptical">
 
     <target
-        android:animation="@anim/rotation"
-        android:name="group_one"/>
+        android:animation="@anim/elliptical_trim_path_anim"
+        android:name="path_one"/>
 
 </animated-vector>

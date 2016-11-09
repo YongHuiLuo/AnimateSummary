@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+   trimPathStart：
+   按轨迹绘制SVG图像（轨迹动画）
+   值在0 - 1之间
+   值类型的float类型 （valueType）
+-->
+<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="1000"
+    android:interpolator="@android:interpolator/accelerate_decelerate"
+    android:propertyName="trimPathStart"
+    android:valueFrom="1"
+    android:valueTo="0"
+    android:valueType="floatType"/>
